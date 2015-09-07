@@ -1,0 +1,38 @@
+//- Bootstrap mixins   
+
+mixin bootstrap-style()
+  link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
+
+mixin bootstrap-script()
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+
+//- Bootswatch mixin    default  flatly  darkly  slate  yeti  superhero  cosmo  cyborg  united  
+
+mixin bootswatch(theme)
+  link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/" + theme + "/bootstrap.min.css", rel="stylesheet")
+
+//- End Bootswatch mixin
+  
+//- End Bootstrap mixins
+
+
+//- Foundation mixins   
+
+mixin foundation-style()
+  link(href="//cdn.foundation5.zurb.com/foundation.css', rel='stylesheet")
+
+mixin foundation-script()
+  script(src="//cdn.foundation5.zurb.com/foundation.js")
+
+//- End Foundation mixins
+
+
+//- UI Kit mixins  () almost-flat  gradient
+
+mixin uikit-style(theme)
+  link(href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/css/uikit." + theme + "min.css", rel="stylesheet")
+
+mixin uikit-script()
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/js/uikit.min.js")
+  
+//- End UI Kit mixins

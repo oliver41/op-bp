@@ -1,0 +1,94 @@
+// Generic
+[class*='decoration-'] {
+  position: absolute;
+}
+[class*='decoration-square-'] {
+  width: 21px;
+  height: 21px;
+  stroke: black;
+}
+
+[class*='decoration-plus-'] {
+  width: 24px;
+  height: 24px;
+  stroke: black;
+}
+
+
+// Hero
+.decoration-plus-1 {
+  stroke: white;
+  top: 50%;
+  left: 140px;
+}
+
+.decoration-square-1 {
+  position: absolute;
+  top: 60%;
+  left: -100px;
+  animation: driftBy 180s -45s linear infinite;
+  stroke: white;
+}
+@keyframes driftBy {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(1500px);
+  }
+}
+
+.decoration-squiggle-1 {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: 300px;
+  stroke: white;
+}
+
+
+// Main (homepage)
+.decoration-square-2 {
+  top: -14px; 
+  left: 1227px;
+}
+.decoration-square-3 {
+  top: 1785px; 
+  left: 26px;
+}
+.decoration-square-4 {
+  top: 359px; 
+  left: 153px;
+}
+
+.decoration-plus-2 {
+  top: 114px; 
+  left: 979px;
+}
+.decoration-plus-3 {
+  top: 1167px; 
+  left: 149px;
+}
+.decoration-plus-4 {
+  top: 1200px; 
+  left: 47px;
+}
+.decoration-plus-5 {
+  top: 1342px; 
+  left: 245px;
+}
+.decoration-plus-6 {
+  top: 319px; 
+  left: 1036px;
+}
+
+
+// Dev
+.drag-info {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  background: red;
+  color: white;
+}

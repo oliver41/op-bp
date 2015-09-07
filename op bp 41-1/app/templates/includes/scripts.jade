@@ -1,0 +1,33 @@
+//- This will load jQuery, but only if you switch it on in config
+if jQuery1
+  script( src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js' )
+  script.
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3-min.js"><\/script>')
+if jQuery2
+  script( src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js' )
+  script.
+    window.jQuery || document.write('<script src="js/vendor/jquery-2.1.4-min.js"><\/script>')
+if jQueryVersion
+  script( src='https://ajax.googleapis.com/ajax/libs/jquery/#{jQueryVersion}/jquery.min.js' )
+  script.
+    window.jQuery || document.write('<script src="js/vendor/jquery-#{jQueryVersion}-min.js"><\/script>')
+if BsScripts
+  script( src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' )
+if FdScripts
+  script( src='https://cdn.foundation5.zurb.com/foundation.js' )
+if UiScripts
+  script( src='https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/js/uikit.min.js' )
+// build:js js/app.min.js
+block scripts
+  script( src='js/app.js' )
+// endbuild
+
+//- This will load Google Analytics: change UA-XXXXX-X to be your site's ID.
+if GoogleAnalytics
+  script.
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','#{UACode}','auto');ga('send','pageview');

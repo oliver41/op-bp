@@ -1,0 +1,112 @@
+include layouts/mixins
+extends layouts/default
+//- https://github.com/corysimmons/lost/blob/gh-pages/index.html
+
+append config
+	- var PageTitle = 'Lost Grid from Cory Simons'
+	- var modernizr = true
+	- var GoogleAnalytics = false
+	- var UiScripts = true
+
+//- Framwork mixins bootstrap foundation uikit
+block FrameworkStyles
+	+uikit-style
+	
+block stylesheets
+	link( href='css/lost-styles.css', rel='stylesheet', type='text/css' )
+
+block content			
+	//- Responsive Blocks
+	div.test
+		div 1
+		div 2
+		div 3
+		div 4
+		
+	div.test
+		div 4
+		div 5
+		div 6
+		div 8
+		
+	section.center
+		div 1
+		div 2
+		div 3
+		div 4
+		div 5
+		div 6
+		
+	//- Offset
+	section
+		.center
+			div 
+				a(href="uikit.html") UI Kit
+			div 2
+		
+	//- Nesting
+	section
+		div a
+		div a
+		div
+			div b
+			div b
+	
+	//- Alignment
+	section
+		div 1
+		
+	//- Cycle
+	section
+		div 1 - Lorem ipsumm dolor sit amet, consectetur adipisicing elit. Dolorem rem nam dolore repellendus provident, voluptas necessitatibus vel cupiditate delectus, doloremque incidunt accusantium quia! Nisi molestiae totam natus, in assumenda accusantium.
+		div 2 - Lorem ipsum dolor sit amet.
+		div 3 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sunt harum ut rerum id quae voluptas velit iusto quasi distinctio.
+		div 4 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, sequi?
+		div 5 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nisi deserunt, dolorem accusamus sint ipsam dolor quae ab animi assumenda architecto placeat possimus fugit doloribus vel, corporis amet aliquam maiores!
+		div 6 - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		
+	//- Verical grid
+	section
+		div 1
+		div 2
+		div 3
+		
+	//- Waffle grid
+	section
+		div 1
+		div 2
+		div 3
+		div 4
+		div 5
+		div 6
+		div 7
+		div 8
+		div 9
+		div 10
+		div 11
+		div 12
+		div 13
+		div 14
+		div 15
+		
+	//- Varying Sizes
+	section
+		div 1
+		div 2
+		
+	//- Source Ordering
+	section
+		div 1
+		div 2
+
+	//- Controlling Cycle
+	.row
+		.quarter 1
+		.half 2
+		.quarter 3
+
+	//- Vertical Grid 100%
+	section.vertical
+		div 1
+		div 2
+		div 3

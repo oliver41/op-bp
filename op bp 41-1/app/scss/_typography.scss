@@ -1,0 +1,68 @@
+html {
+  font-size: 100%;
+  @include breakpoint(mama-bear) {
+    font-size: 90%;
+  }
+  @include breakpoint(baby-bear) {
+    font-size: 80%;
+  }
+}
+
+body {
+  font-family: 'Whitney SSm A', 'Whitney SSm B', Sans-Serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.7;
+  color: $darkgray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  a {
+    color: $green;
+  }
+}
+h1, h2, h3 {
+  font-style: italic;
+}
+h2 {
+  font-size: 2.3rem;
+  margin: 3rem 0 0.8rem 0;
+}
+h3 {
+  font-size: 1.6rem;
+  margin: 1.5rem 0 0.8rem 0;
+}
+h4 {
+  font-size: 1.3rem;
+  margin: 0 0 0.6rem 0;
+}
+h5 {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 4rem 0;
+  height: 1px;
+}
+
+.article-text {
+  a {
+    border-bottom: 1px solid #ccc;
+    &:hover, &:focus {
+      color: #999;
+    }
+  }
+}

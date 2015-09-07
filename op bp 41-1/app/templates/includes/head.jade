@@ -1,0 +1,19 @@
+head
+  title
+    | #{PageTitle}
+  meta( charset='utf-8' )
+  meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+  meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+  //- Meta description drawn from config file
+  meta( name='description', content=MetaDesc )
+  //- This will load Google Fonts, but only if font names are specified in the config
+  if GoogleFonts
+    link( href='https://fonts.googleapis.com/css?family=' + GoogleFonts, rel='stylesheet', type='text/css' )
+  block FrameworkStyles
+  // build:css css/styles.min.css
+  block stylesheets
+    link( href='css/global.css', rel='stylesheet', type='text/css' ) 
+  // endbuild
+  //- This will load modernizr, but only if you switch it on in config
+  if modernizr
+    script( src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' )
